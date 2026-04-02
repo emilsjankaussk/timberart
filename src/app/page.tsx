@@ -51,7 +51,7 @@ function StatCounter({ value, label }: { value: string; label: string }) {
 // ─── Hero Section ────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col pt-28 pb-12 lg:pt-32 lg:pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col pt-32 pb-8 lg:pt-32 lg:pb-20 overflow-hidden">
       {/* Video Background */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -68,36 +68,36 @@ function Hero() {
       <div className="relative container-main w-full mt-auto">
         <div className="max-w-3xl animate-fade-up">
           {/* Trust badges */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            <span className="trust-badge">🇱🇻 Made in Latvia</span>
-            <span className="trust-badge">🇪🇺 EU Certified</span>
-            <span className="trust-badge">LIAA Partner</span>
+          <div className="flex flex-wrap gap-2 mb-4 lg:mb-6">
+            <span className="trust-badge text-[10px] lg:text-xs">🇱🇻 Made in Latvia</span>
+            <span className="trust-badge text-[10px] lg:text-xs">🇪🇺 EU Certified</span>
+            <span className="trust-badge text-[10px] lg:text-xs">LIAA Partner</span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl text-cream leading-[0.95] tracking-tight drop-shadow-lg">
+          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-cream leading-[0.95] tracking-tight drop-shadow-lg">
             Saunas crafted<br />
             <span className="italic text-amber-500">for a lifetime</span><br />
             of ritual.
           </h1>
 
-          <p className="mt-6 text-cream/90 text-lg max-w-xl leading-relaxed drop-shadow">
+          <p className="mt-4 lg:mt-6 text-cream/90 text-sm sm:text-lg max-w-xl leading-relaxed drop-shadow">
             Premium thermowood barrel saunas, sauna houses, micro homes & hot tubs.
             Delivered across Europe from our craft workshop in Latvia.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4 mt-8">
-            <Link href="/kontakti" className="btn-amber text-base px-8 py-4 pulse-amber">
+          <div className="flex flex-wrap gap-3 lg:gap-4 mt-6 lg:mt-8">
+            <Link href="/kontakti" className="btn-amber text-sm sm:text-base px-6 py-3 lg:px-8 lg:py-4 pulse-amber">
               Get Your Free Quote
             </Link>
-            <Link href="#collections" className="btn-ghost text-base px-8 py-4 bg-charcoal/20 backdrop-blur-sm">
-              Explore Products <ArrowRight className="w-5 h-5" />
+            <Link href="#collections" className="btn-ghost text-sm sm:text-base px-6 py-3 lg:px-8 lg:py-4 bg-charcoal/20 backdrop-blur-sm">
+              Explore Products <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
             </Link>
           </div>
 
           {/* Stats bar */}
-          <div className="mt-10 flex flex-wrap gap-10">
+          <div className="mt-8 lg:mt-10 flex flex-wrap gap-6 lg:gap-10">
             {STATS.map((s) => (
               <StatCounter key={s.label} value={s.value} label={s.label} />
             ))}
